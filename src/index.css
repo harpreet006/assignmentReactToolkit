@@ -1,0 +1,102 @@
+@import url("./styles/util.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 62.5%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  color: #222426cb;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 1.3rem;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+}
+
+@layer utilities {
+  .collapse {
+    visibility: visible;
+  }
+}
+
+/* fade effect at the top of the sidebar */
+.sidebarMenuItems:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(
+    #0368a3 25%,
+    rgba(3, 104, 163, 0.15) 95%,
+    rgba(3, 104, 163, 0)
+  );
+
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* scrollbar default styles */
+
+.sidebarScrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+.sidebarScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.sidebarScrollbar::-webkit-scrollbar-track {
+  background: #0368a3; /* Track color */
+  margin-right: 2px;
+}
+
+.sidebarScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 1000;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f3f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.table {
+  font-size: 1.2rem;
+}
+
+.table th {
+  font-size: 1.2rem;
+}

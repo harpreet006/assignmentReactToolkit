@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* components */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+/* utils styles */
+.heading-primary {
+  @apply text-[22px];
+  font-weight: 600;
+}
+
+.error-message {
+  @apply text-red-600;
+  @apply text-[12px];
+}
+
+.shadow-hover {
+  @apply shadow-sm;
+}
+
+.shadow-hover:hover {
+  @apply shadow-md;
+}
+
+/* datepicker */
+.react-datepicker-wrapper input[type="text"] {
+  @apply border-2 border-gray-300;
+}
